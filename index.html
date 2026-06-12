@@ -228,6 +228,109 @@
   .pull-quote p { font-family: var(--serif); font-size: 1.3rem; line-height: 1.5; font-style: italic; margin-bottom: 0.5rem; }
   .pull-quote cite { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); font-style: normal; }
 
+
+  /* ══ A — MYTHES VS RÉALITÉ ══════════════════════════════ */
+  .mythes-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:1.5rem; margin:2.5rem 0; }
+  .mythe-card { border:1px solid var(--border); overflow:hidden; display:flex; flex-direction:column; }
+  .mythe-face { padding:1.5rem 1.75rem; }
+  .mythe-face.myth-side { background:#0e0820; border-bottom:2px solid rgba(139,92,246,0.35); }
+  .mythe-face.truth-side { background:#fff; flex:1; }
+  .mythe-badge { font-family:var(--mono); font-size:0.58rem; letter-spacing:0.14em; text-transform:uppercase; padding:0.18rem 0.55rem; display:inline-block; margin-bottom:0.85rem; border-radius:2px; }
+  .myth-badge { background:rgba(139,92,246,0.18); color:#c4b5fd; border:1px solid rgba(139,92,246,0.35); }
+  .truth-badge { background:var(--teal-light); color:#0a7a5f; border:1px solid rgba(14,168,130,0.3); }
+  .mythe-text { font-size:0.9rem; line-height:1.7; }
+  .mythe-face.myth-side .mythe-text { color:rgba(247,245,240,0.72); font-style:italic; }
+  .mythe-face.truth-side .mythe-text { color:var(--ink-2); }
+  .mythe-face.truth-side .mythe-text strong { color:var(--ink); font-weight:600; }
+  .mythe-source { font-family:var(--mono); font-size:0.6rem; letter-spacing:0.05em; color:var(--ink-3); text-transform:uppercase; margin-top:1rem; padding-top:0.75rem; border-top:1px solid var(--border); line-height:1.6; }
+  .mythe-source a { color:var(--teal); text-decoration:none; }
+  .mythe-source a:hover { text-decoration:underline; }
+  .mythes-caveat { background:var(--paper-2); border-left:3px solid var(--ink-3); padding:1rem 1.5rem; font-size:0.78rem; color:var(--ink-3); line-height:1.65; font-family:var(--mono); letter-spacing:0.02em; margin-top:1.5rem; }
+
+  /* ══ B — GÉNÉRATEUR D'EMAIL ══════════════════════════════ */
+  .elu-section { background:var(--red-light); }
+  .elu-inner { max-width:860px; margin:0 auto; padding:6rem 4rem; }
+  .elu-eyebrow { font-family:var(--mono); font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--red); margin-bottom:1rem; display:flex; align-items:center; gap:0.75rem; }
+  .elu-eyebrow::before { content:''; display:block; width:24px; height:1px; background:var(--red); }
+  .elu-intro { font-size:0.95rem; color:var(--ink-2); max-width:640px; line-height:1.75; margin-bottom:2rem; }
+  .elu-form { display:grid; grid-template-columns:1fr 1fr; gap:0.85rem; margin-bottom:1rem; }
+  .elu-field { display:flex; flex-direction:column; gap:0.35rem; }
+  .elu-field.full { grid-column:1/-1; }
+  .elu-label { font-family:var(--mono); font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-3); }
+  .elu-input, .elu-select { background:white; border:1px solid var(--border); padding:0.65rem 0.9rem; font-family:var(--sans); font-size:0.9rem; color:var(--ink); outline:none; transition:border-color 0.15s; width:100%; -webkit-appearance:none; appearance:none; border-radius:0; }
+  .elu-input:focus, .elu-select:focus { border-color:var(--red); box-shadow:0 0 0 3px rgba(87,31,234,0.07); }
+  .elu-input::placeholder { color:var(--ink-3); }
+  .elu-btn { background:var(--ink); color:white; border:none; padding:0.8rem 2rem; font-family:var(--mono); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer; transition:background 0.15s; width:100%; margin-top:0.25rem; }
+  .elu-btn:hover { background:var(--red); }
+  .elu-output { display:none; margin-top:1.75rem; }
+  .elu-output.visible { display:block; }
+  .elu-output-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem; }
+  .elu-output-label { font-family:var(--mono); font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-3); }
+  .elu-email-box { background:white; border:1px solid var(--border); padding:1.75rem; font-size:0.875rem; color:var(--ink-2); line-height:1.8; white-space:pre-wrap; font-family:var(--sans); max-height:360px; overflow-y:auto; }
+  .elu-copy-btn { background:var(--teal); color:white; border:none; padding:0.55rem 1.25rem; font-family:var(--mono); font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; cursor:pointer; transition:background 0.15s; }
+  .elu-copy-btn:hover { background:#0b8a6b; }
+  .elu-copy-btn.copied { background:var(--ink); }
+  .elu-counter { font-family:var(--mono); font-size:0.68rem; letter-spacing:0.06em; color:var(--ink-3); margin-top:1.25rem; }
+  .elu-counter strong { color:var(--red); }
+  .elu-notice { font-size:0.78rem; color:var(--ink-3); line-height:1.6; margin-top:0.75rem; }
+  .elu-notice a { color:var(--teal); }
+
+  /* ══ C — COÛT DU DÉNI ════════════════════════════════════ */
+  .cout-section { background:#070211; color:var(--paper); }
+  .cout-inner { max-width:1200px; margin:0 auto; padding:6rem 4rem; }
+  .cout-eyebrow { font-family:var(--mono); font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:#fbbf24; margin-bottom:1rem; display:flex; align-items:center; gap:0.75rem; }
+  .cout-eyebrow::before { content:''; display:block; width:24px; height:1px; background:#fbbf24; }
+  .cout-headline { font-family:var(--serif); font-size:clamp(1.8rem,3.5vw,2.8rem); color:var(--paper); margin-bottom:0.75rem; }
+  .cout-sub { font-size:0.95rem; color:rgba(247,245,240,0.55); margin-bottom:3rem; max-width:580px; line-height:1.75; }
+  .cout-display { display:grid; grid-template-columns:1fr 1fr; gap:2px; background:rgba(251,191,36,0.12); margin-bottom:1.75rem; }
+  .cout-cell { background:rgba(7,2,17,0.85); padding:2.5rem 2rem; }
+  .cout-cell-label { font-family:var(--mono); font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(247,245,240,0.35); margin-bottom:1rem; }
+  .cout-big { font-family:var(--serif); font-size:clamp(2rem,4vw,3.6rem); line-height:1; letter-spacing:-0.03em; }
+  .cout-big.gold { color:#fbbf24; }
+  .cout-big.muted { color:rgba(247,245,240,0.75); }
+  .cout-context { font-size:0.8rem; color:rgba(247,245,240,0.38); margin-top:0.75rem; line-height:1.55; }
+  .cout-gap-box { background:rgba(251,191,36,0.07); border:1px solid rgba(251,191,36,0.2); padding:1.5rem 1.75rem; margin-bottom:1.5rem; display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap; }
+  .cout-gap-num { font-family:var(--serif); font-size:3rem; color:#fbbf24; letter-spacing:-0.04em; flex-shrink:0; line-height:1; }
+  .cout-gap-text { font-size:0.88rem; color:rgba(247,245,240,0.6); line-height:1.65; }
+  .cout-gap-text strong { color:var(--paper); }
+  .cout-note { font-family:var(--mono); font-size:0.63rem; letter-spacing:0.04em; color:rgba(247,245,240,0.25); line-height:1.65; }
+
+  /* ══ D — PARTAGER CE CHIFFRE ════════════════════════════ */
+  .partager-section { background:var(--paper-2); }
+  .partager-inner { max-width:1200px; margin:0 auto; padding:6rem 4rem; }
+  .partager-eyebrow { font-family:var(--mono); font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--ink-3); margin-bottom:1rem; display:flex; align-items:center; gap:0.75rem; }
+  .partager-eyebrow::before { content:''; display:block; width:24px; height:1px; background:var(--ink-3); }
+  .partager-intro { font-size:0.95rem; color:var(--ink-2); max-width:600px; line-height:1.75; margin-bottom:2.5rem; }
+  .share-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:1px; background:var(--border); border:1px solid var(--border); margin-bottom:1.5rem; }
+  .share-card { background:white; padding:1.5rem; display:flex; flex-direction:column; gap:0.65rem; transition:background 0.15s; }
+  .share-card:hover { background:var(--paper); }
+  .share-stat { font-family:var(--serif); font-size:2.4rem; line-height:1; letter-spacing:-0.03em; color:var(--red); }
+  .share-label { font-size:0.83rem; color:var(--ink-2); line-height:1.55; flex:1; }
+  .share-source-tag { font-family:var(--mono); font-size:0.58rem; letter-spacing:0.07em; color:var(--ink-3); text-transform:uppercase; }
+  .share-btn { background:var(--ink); color:white; border:none; padding:0.5rem 0.9rem; font-family:var(--mono); font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer; transition:background 0.15s; display:inline-flex; align-items:center; gap:0.4rem; align-self:flex-start; margin-top:auto; }
+  .share-btn:hover { background:var(--red); }
+  /* modal */
+  .share-overlay { display:none; position:fixed; inset:0; background:rgba(13,10,26,0.82); z-index:500; align-items:center; justify-content:center; padding:1.5rem; }
+  .share-overlay.open { display:flex; }
+  .share-modal { background:var(--ink); padding:1.75rem; max-width:500px; width:100%; display:flex; flex-direction:column; gap:1rem; }
+  .share-canvas-wrap { width:100%; aspect-ratio:1/1; background:#080312; display:flex; align-items:center; justify-content:center; }
+  .share-canvas-wrap canvas { width:100%!important; height:auto!important; display:block; }
+  .share-modal-btns { display:flex; gap:0.75rem; flex-wrap:wrap; }
+  .share-dl-btn { background:var(--red); color:white; border:none; padding:0.7rem 1.5rem; font-family:var(--mono); font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer; flex:1; transition:opacity 0.15s; }
+  .share-dl-btn:hover { opacity:0.85; }
+  .share-close-btn { background:transparent; border:1px solid rgba(247,245,240,0.2); color:rgba(247,245,240,0.55); padding:0.7rem 1rem; font-family:var(--mono); font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; cursor:pointer; transition:all 0.15s; }
+  .share-close-btn:hover { border-color:rgba(247,245,240,0.5); color:var(--paper); }
+  .share-modal-note { font-family:var(--mono); font-size:0.62rem; color:rgba(247,245,240,0.28); line-height:1.6; }
+  .partager-notice { font-size:0.78rem; color:var(--ink-3); line-height:1.6; font-family:var(--mono); letter-spacing:0.02em; }
+
+  @media (max-width:768px) {
+    .elu-form { grid-template-columns:1fr; }
+    .cout-display { grid-template-columns:1fr; }
+    .elu-inner, .cout-inner, .partager-inner { padding-left:1.5rem; padding-right:1.5rem; }
+    .mythes-grid { grid-template-columns:1fr; }
+    .cout-gap-box { flex-direction:column; gap:0.75rem; }
+  }
+
   @media (max-width: 768px) {
     .hero-nav, .hero-body, .section, .section-full { padding-left: 1.5rem; padding-right: 1.5rem; }
     .hero-nav { padding-top: 0.6rem; padding-bottom: 0.6rem; }
@@ -253,10 +356,12 @@
   <span class="logo">Inceste France — Données & Ressources</span>
   <ul class="hero-nav nav-links">
     <li><a href="#chiffres">Chiffres</a></li>
+    <li><a href="#mythes">Mythes</a></li>
     <li><a href="#impunite">Impunité</a></li>
     <li><a href="#justice">Justice</a></li>
     <li><a href="#agir">J'agis</a></li>
     <li><a href="#ressources">Ressources</a></li>
+    <li><a href="#partager" style="border-color:rgba(87,31,234,0.5);background:rgba(87,31,234,0.18)">Partager</a></li>
   </ul>
 </nav>
 
@@ -269,11 +374,14 @@
     <span class="hero-scroll">Défiler pour découvrir les données</span>
   </div>
   <div class="ticker-bar">
-    <span class="ticker-label">Depuis le début de la journée :</span>
+    <span class="ticker-label">Depuis minuit :</span>
     <span class="ticker-value" id="ticker-val">0</span>
-    <span class="ticker-label">nouveaux enfants victimes en France</span>
+    <span class="ticker-label">nouveaux enfants victimes</span>
     <span class="ticker-sep">·</span>
-    <span class="ticker-label">CIIVISE 2023 · 160 000 victimes/an</span>
+    <span class="ticker-label" style="color:rgba(255,255,255,0.75)">Coût du déni :</span>
+    <span class="ticker-value" id="ticker-cost" style="color:#fbbf24">0 €</span>
+    <span class="ticker-sep">·</span>
+    <span class="ticker-label" style="opacity:0.5">9,7 Mds€/an · CIIVISE 2023</span>
   </div>
 </header>
 
@@ -325,7 +433,122 @@
 
 <hr class="section-divider">
 
-<!-- COMPTEUR INTERACTIF -->
+<!-- ══ A — MYTHES VS RÉALITÉ ══════════════════════════════ -->
+<section id="mythes">
+  <div class="section">
+    <p class="section-eyebrow">Ce que dit la science</p>
+    <h2>Mythes vs Réalité</h2>
+    <p class="section-intro">Certaines représentations sur l'inceste sont fausses — et dangereuses. Elles retardent les signalements et permettent aux agresseurs de rester dans l'impunité. Ces cartes confrontent l'idée reçue aux données scientifiques vérifiées, multisources et convergentes.</p>
+    <div class="mythes-grid">
+
+      <div class="mythe-card">
+        <div class="mythe-face myth-side">
+          <span class="mythe-badge myth-badge">Mythe</span>
+          <p class="mythe-text">« L'inceste est un problème des milieux défavorisés ou des familles en difficulté sociale. »</p>
+        </div>
+        <div class="mythe-face truth-side">
+          <span class="mythe-badge truth-badge">Ce que dit la science</span>
+          <p class="mythe-text">Trois études épidémiologiques indépendantes convergent : enquête Virage (Ined, 2015), Charruault et al. (2021), Marsican/Bajos/Pousson (2023). <strong>Aucune ne documente de sur-représentation d'une catégorie socioprofessionnelle.</strong> L'enquête Virage enregistre des déclarations dans tous les milieux sans corrélation statistiquement significative avec le revenu, le diplôme ou la zone géographique.</p>
+          <p class="mythe-source">Enquête Virage, Ined 2015 (pub. 2021) · Charruault et al., Rev. Épidémiol. Santé Publique, 2021 · Marsican/Bajos/Pousson, 2023 · <a href="https://www.rcf.fr/articles/economie-et-societe/rapport-de-la-ciivise-160-000-enfants-sont-victimes-chaque-annee-de" target="_blank" rel="noopener">RCF · Rapport CIIVISE</a></p>
+        </div>
+      </div>
+
+      <div class="mythe-card">
+        <div class="mythe-face myth-side">
+          <span class="mythe-badge myth-badge">Mythe</span>
+          <p class="mythe-text">« Les agresseurs ont un profil psychologique reconnaissable — on peut les repérer. »</p>
+        </div>
+        <div class="mythe-face truth-side">
+          <span class="mythe-badge truth-badge">Ce que dit la science</span>
+          <p class="mythe-text"><strong>Il n'existe pas de profil psychologique caractéristique</strong> des auteurs de violences sexuelles intrafamiliales. Une question parlementaire au gouvernement (17<sup>e</sup> législature, QG856) le confirme explicitement : ils « sévissent dans tous les milieux et ne sont pas l'apanage des milieux défavorisés ». L'absence de profil type est précisément ce qui rend le déni social si efficace — et si dangereux.</p>
+          <p class="mythe-source"><a href="https://www.assemblee-nationale.fr/dyn/17/questions/QANR5L17QG856.pdf" target="_blank" rel="noopener">Assemblée nationale, QG856, 17<sup>e</sup> législature</a> · CIIVISE, rapport nov. 2023</p>
+        </div>
+      </div>
+
+      <div class="mythe-card">
+        <div class="mythe-face myth-side">
+          <span class="mythe-badge myth-badge">Mythe</span>
+          <p class="mythe-text">« Les fausses accusations sont fréquentes — les enfants inventent ou sont manipulés. »</p>
+        </div>
+        <div class="mythe-face truth-side">
+          <span class="mythe-badge truth-badge">Ce que dit la science</span>
+          <p class="mythe-text">La littérature clinique et l'AIVI établissent que <strong>les fausses allégations spontanées d'abus sexuels sur mineurs représentent moins de 1 cas pour 1 000.</strong> La prise de parole d'un enfant est un signal à traiter sans délai. L'emprise, la honte et la dépendance affective à l'agresseur rendent le mensonge dans ce sens extrêmement rare.</p>
+          <p class="mythe-source">AIVI · Littérature clinique en psychotraumatologie · CIIVISE, rapport nov. 2023</p>
+        </div>
+      </div>
+
+      <div class="mythe-card">
+        <div class="mythe-face myth-side">
+          <span class="mythe-badge myth-badge">Mythe</span>
+          <p class="mythe-text">« L'inceste, c'est rare — ça n'arrive pas dans les familles "normales". »</p>
+        </div>
+        <div class="mythe-face truth-side">
+          <span class="mythe-badge truth-badge">Ce que dit la science</span>
+          <p class="mythe-text">L'inceste touche <strong>11 % des Français adultes</strong> (7,4 millions). 160 000 enfants en sont victimes chaque année. Dans <strong>80 % des cas, l'auteur est un membre de la famille.</strong> Un tiers des Français déclare connaître au moins une victime dans son entourage (Ipsos, 2023). Ce n'est pas rare : c'est massivement tu.</p>
+          <p class="mythe-source">Sondage Ipsos pour Face à l'inceste, oct. 2023 · CIIVISE, rapport nov. 2023 · <a href="https://www.lejdd.fr/societe/inceste-et-violences-sexuelles-les-agresseurs-coutent-chaque-annee-97-milliards-deuros-la-societe-136642" target="_blank" rel="noopener">JDD</a></p>
+        </div>
+      </div>
+
+      <div class="mythe-card">
+        <div class="mythe-face myth-side">
+          <span class="mythe-badge myth-badge">Mythe</span>
+          <p class="mythe-text">« Si ça s'était passé, l'enfant en aurait parlé — le silence prouve l'innocence. »</p>
+        </div>
+        <div class="mythe-face truth-side">
+          <span class="mythe-badge truth-badge">Ce que dit la science</span>
+          <p class="mythe-text">Quand un enfant révèle des violences, <strong>92 % ne reçoivent pas de réponse protectrice</strong> (CIIVISE, 2023). Le silence n'est pas une preuve d'innocence : il est le produit de l'emprise, de la honte, de la peur des conséquences familiales et de la dépendance affective à l'agresseur. Le délai entre premières violences et première parole se compte souvent en décennies.</p>
+          <p class="mythe-source">CIIVISE, rapport nov. 2023 · Fondation Jean-Jaurès, avr. 2026</p>
+        </div>
+      </div>
+
+      <div class="mythe-card">
+        <div class="mythe-face myth-side">
+          <span class="mythe-badge myth-badge">Mythe</span>
+          <p class="mythe-text">« L'inceste est lié à une culture, une religion ou une origine géographique particulière. »</p>
+        </div>
+        <div class="mythe-face truth-side">
+          <span class="mythe-badge truth-badge">Ce que dit la science</span>
+          <p class="mythe-text">Les données disponibles <strong>n'établissent aucune corrélation statistiquement significative</strong> entre appartenance religieuse, origine culturelle ou zone géographique et prévalence de l'inceste. Cette représentation détourne l'attention du phénomène majoritaire. Le seul facteur documenté est le genre : <strong>97 % des auteurs sont des hommes</strong> (CIIVISE, 2023).</p>
+          <p class="mythe-source">Enquête Virage, Ined 2015 (pub. 2021) · CIIVISE, rapport nov. 2023 · <a href="https://www.rcf.fr/articles/economie-et-societe/rapport-de-la-ciivise-160-000-enfants-sont-victimes-chaque-annee-de" target="_blank" rel="noopener">RCF</a></p>
+        </div>
+      </div>
+
+    </div>
+    <div class="mythes-caveat">Note méthodologique — Ces affirmations s'appuient sur des études épidémiologiques françaises et des données institutionnelles vérifiées. L'absence de corrélation documentée ne signifie pas l'absence du phénomène dans un milieu particulier, mais l'impossibilité de prédire son occurrence à partir d'un profil social. Sources primaires citées sur chaque carte.</div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══ C — COÛT DU DÉNI EN TEMPS RÉEL ════════════════════ -->
+<section class="cout-section">
+  <div class="cout-inner">
+    <p class="cout-eyebrow">Coût du déni — en temps réel</p>
+    <h2 class="cout-headline">307 euros s'écoulent chaque seconde.</h2>
+    <p class="cout-sub">La CIIVISE a calculé que l'impunité des agresseurs et l'absence de soutien aux victimes coûtent <strong style="color:var(--paper)">9,7 milliards d'euros par an</strong> à la société française. Ci-dessous : le montant cumulé depuis minuit, mis en regard avec le budget annuel de l'État consacré à la lutte contre les VSS.</p>
+    <div class="cout-display">
+      <div class="cout-cell">
+        <p class="cout-cell-label">Coût du déni — cumulé depuis minuit</p>
+        <div class="cout-big gold" id="cout-val">calcul…</div>
+        <p class="cout-context">9,7 Mds€/an ÷ 31 557 600 s = 307,4 €/s · CIIVISE, avis "Le coût du déni", 12 juin 2023</p>
+      </div>
+      <div class="cout-cell">
+        <p class="cout-cell-label">Budget État — lutte contre les VSS (annuel)</p>
+        <div class="cout-big muted">~50 M€</div>
+        <p class="cout-context">PLF 2024, prog. 137 DGCS (Égalité femmes/hommes) + action CIPDR. Hors budget Justice global.</p>
+      </div>
+    </div>
+    <div class="cout-gap-box">
+      <div class="cout-gap-num">×194</div>
+      <div class="cout-gap-text">Le coût social annuel du déni est <strong>194 fois supérieur</strong> au budget alloué à la lutte contre les VSS. La CIIVISE le formule clairement : <em>« Traiter le problème coûte moins cher que de l'ignorer. »</em> Le gouvernement a reconnu ce chiffre — la loi intégrale n'a pas encore été adoptée.</div>
+    </div>
+    <p class="cout-note">Sources : CIIVISE, avis "Le coût du déni", 12 juin 2023 · PLF 2024, prog. 137 (DGCS) et action CIPDR · Les 9,7 Mds€ comprennent pertes de productivité, coûts de santé à long terme, recours à la justice et prestations sociales. Les deux tiers résultent des conséquences sur la santé mentale et physique des victimes.</p>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- COMPTEUR INTERACTIF (existant) -->
 <section class="counter-section">
   <div class="counter-inner">
     <p class="counter-eyebrow">Données en temps réel</p>
@@ -805,6 +1028,113 @@
   </div>
 </section>
 
+<!-- ══ B — GÉNÉRATEUR D'EMAIL À SON ÉLU ══════════════════ -->
+<section id="elu" class="elu-section">
+  <div class="elu-inner">
+    <p class="elu-eyebrow">Acte citoyen direct</p>
+    <h2>Écrivez à votre député·e en 30 secondes</h2>
+    <p class="elu-intro">Le gouvernement n'a retenu que 41 des 82 recommandations de la CIIVISE. La PPL intégrale (109 signataires, déc. 2025) n'est pas encore inscrite à l'ordre du jour. Un email personnalisé est l'acte démocratique le plus direct et le plus visible pour les parlementaires — peu pratiqué, donc très remarqué. Renseignez trois champs, copiez le texte généré.</p>
+    <div class="elu-form">
+      <div class="elu-field">
+        <label class="elu-label" for="elu-nom">Votre prénom et nom</label>
+        <input class="elu-input" type="text" id="elu-nom" placeholder="Marie Dupont" autocomplete="name">
+      </div>
+      <div class="elu-field">
+        <label class="elu-label" for="elu-dept">Votre département</label>
+        <input class="elu-input" type="text" id="elu-dept" placeholder="Isère (38)" autocomplete="off">
+      </div>
+      <div class="elu-field full">
+        <label class="elu-label" for="elu-sujet">Votre préoccupation principale</label>
+        <select class="elu-select" id="elu-sujet">
+          <option value="">— Choisissez un sujet —</option>
+          <option value="prescriptibilite">Imprescriptibilité des crimes d'inceste</option>
+          <option value="ppl">Inscription de la PPL intégrale à l'ordre du jour</option>
+          <option value="ciivise">Mise en œuvre des 82 recommandations CIIVISE</option>
+          <option value="budget">Budget insuffisant face au coût du déni (9,7 Mds€/an)</option>
+          <option value="formation">Formation obligatoire des professionnels au repérage</option>
+          <option value="signalement">Amélioration du traitement des plaintes (&lt; 1 % de condamnations)</option>
+        </select>
+      </div>
+    </div>
+    <button class="elu-btn" id="elu-generate-btn">Générer mon email</button>
+    <div class="elu-output" id="elu-output">
+      <div class="elu-output-header">
+        <span class="elu-output-label">Email prêt à copier</span>
+        <button class="elu-copy-btn" id="elu-copy-btn">Copier</button>
+      </div>
+      <div class="elu-email-box" id="elu-email-box"></div>
+      <p class="elu-notice">Personnalisez ce texte avant envoi si vous le souhaitez. Pour trouver l'adresse de votre député·e : <a href="https://www.assemblee-nationale.fr/dyn/vos-deputes" target="_blank" rel="noopener">assemblee-nationale.fr/dyn/vos-deputes</a>. Ce message peut aussi être transmis à votre sénateur·rice : <a href="https://www.senat.fr/elus/senateurs.html" target="_blank" rel="noopener">senat.fr/elus/senateurs</a>.</p>
+      <p class="elu-counter" id="elu-counter"></p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══ D — PARTAGER CE CHIFFRE ══════════════════════════ -->
+<section id="partager" class="partager-section">
+  <div class="partager-inner">
+    <p class="partager-eyebrow">Diffusion citoyenne</p>
+    <h2>Partagez un chiffre</h2>
+    <p class="partager-intro">Chaque statistique ci-dessous peut être téléchargée en image carrée 1080×1080 px, prête pour Instagram, LinkedIn ou X. Cliquez sur « Générer », prévisualisez, téléchargez. Zéro friction — maximum de diffusion organique.</p>
+    <div class="share-grid">
+      <div class="share-card">
+        <div class="share-stat">7,4 M</div>
+        <p class="share-label">Français adultes victimes d'inceste — 1 personne sur 10</p>
+        <p class="share-source-tag">Ipsos · Face à l'inceste, oct. 2023</p>
+        <button class="share-btn" onclick="openShareModal(0)">▼ Générer l'image</button>
+      </div>
+      <div class="share-card">
+        <div class="share-stat">160 000</div>
+        <p class="share-label">Enfants victimes chaque année en France</p>
+        <p class="share-source-tag">CIIVISE, rapport nov. 2023</p>
+        <button class="share-btn" onclick="openShareModal(1)">▼ Générer l'image</button>
+      </div>
+      <div class="share-card">
+        <div class="share-stat">&lt; 1 %</div>
+        <p class="share-label">Des affaires d'inceste aboutissent à une condamnation</p>
+        <p class="share-source-tag">CIIVISE 2023 · Sénat PPL n°127, 2025</p>
+        <button class="share-btn" onclick="openShareModal(2)">▼ Générer l'image</button>
+      </div>
+      <div class="share-card">
+        <div class="share-stat">9,7 Mds€</div>
+        <p class="share-label">Le coût annuel du déni pour la société française</p>
+        <p class="share-source-tag">CIIVISE, avis juin 2023</p>
+        <button class="share-btn" onclick="openShareModal(3)">▼ Générer l'image</button>
+      </div>
+      <div class="share-card">
+        <div class="share-stat">92 %</div>
+        <p class="share-label">Des enfants qui parlent ne reçoivent pas de réponse protectrice</p>
+        <p class="share-source-tag">CIIVISE, rapport intermédiaire 2022–2023</p>
+        <button class="share-btn" onclick="openShareModal(4)">▼ Générer l'image</button>
+      </div>
+      <div class="share-card">
+        <div class="share-stat">97 %</div>
+        <p class="share-label">Des auteurs d'inceste sont des hommes — tous milieux confondus</p>
+        <p class="share-source-tag">CIIVISE 2023 · Enquête Virage, Ined 2015</p>
+        <button class="share-btn" onclick="openShareModal(5)">▼ Générer l'image</button>
+      </div>
+    </div>
+    <p class="partager-notice">Images générées localement dans votre navigateur — aucune donnée transmise à un serveur. Format 1080×1080 px, fond sombre, lisibles sur tous les réseaux. Source et URL intégrées automatiquement.</p>
+  </div>
+</section>
+
+<!-- Overlay de prévisualisation -->
+<div class="share-overlay" id="share-overlay" role="dialog" aria-modal="true" aria-label="Aperçu image à partager">
+  <div class="share-modal">
+    <div class="share-canvas-wrap">
+      <canvas id="share-canvas" width="1080" height="1080"></canvas>
+    </div>
+    <div class="share-modal-btns">
+      <button class="share-dl-btn" id="share-dl-btn">Télécharger (PNG 1080×1080)</button>
+      <button class="share-close-btn" id="share-close-btn">Fermer</button>
+    </div>
+    <p class="share-modal-note">Image générée localement · Chiffre, source et URL inclus · Libre de diffusion à des fins de sensibilisation non commerciale</p>
+  </div>
+</div>
+
+<hr class="section-divider">
+
 <!-- SOURCES -->
 <footer>
 <div class="sources-section">
@@ -835,32 +1165,49 @@
 </footer>
 
 <script>
-// ── TICKER : depuis minuit (heure locale) ─────────────────
+// ── TICKER : victimes depuis minuit ──────────────────────
 const RATE_PER_DAY = 160000 / 365;
 const RATE_PER_MS  = RATE_PER_DAY / (24 * 60 * 60 * 1000);
+// Coût du déni : 9,7 Mds€/an = 307,44 €/s
+const COUT_PER_S   = 9700000000 / (365 * 24 * 3600);
 
 function getMsSinceMidnight() {
-  const now = new Date();
-  const midnight = new Date(now);
+  const now = new Date(), midnight = new Date(now);
   midnight.setHours(0, 0, 0, 0);
   return now - midnight;
 }
 
 const tickerEl = document.getElementById('ticker-val');
+const coutEl   = document.getElementById('ticker-cost');
+
 function updateTicker() {
-  const count = getMsSinceMidnight() * RATE_PER_MS;
-  tickerEl.textContent = Math.floor(count).toLocaleString('fr-FR');
+  const ms = getMsSinceMidnight();
+  tickerEl.textContent = Math.floor(ms * RATE_PER_MS).toLocaleString('fr-FR');
+  if (coutEl) {
+    const euros = Math.floor(ms / 1000 * COUT_PER_S);
+    coutEl.textContent = euros.toLocaleString('fr-FR') + ' €';
+  }
   requestAnimationFrame(updateTicker);
 }
 requestAnimationFrame(updateTicker);
+
+// ── COMPTEUR COÛT DU DÉNI (section dédiée) ──────────────
+const coutValEl = document.getElementById('cout-val');
+function updateCout() {
+  if (!coutValEl) return;
+  const euros = Math.floor(getMsSinceMidnight() / 1000 * COUT_PER_S);
+  coutValEl.textContent = euros.toLocaleString('fr-FR') + ' €';
+  requestAnimationFrame(updateCout);
+}
+requestAnimationFrame(updateCout);
 
 // ── COMPTEUR INTERACTIF ──────────────────────────────────
 const counters = {
   minute:  { main: '< 1', compare: '< 0,01', ctx: 'En une seule minute, en France', cctx: 'Décès sur la route sur la même période' },
   heure:   { main: Math.round(160000/8760), compare: (3524/8760).toFixed(2), ctx: 'En une seule heure, en France', cctx: 'Décès sur la route sur la même période' },
   jour:    { main: Math.round(160000/365), compare: Math.round(3524/365), ctx: 'En un seul jour, dans toute la France', cctx: 'Décès sur la route sur la même période (3 524 en 2023)' },
-  semaine: { main: Math.round(160000/52), compare: Math.round(3524/52), ctx: 'En une semaine, dans toute la France', cctx: 'Décès sur la route sur la même période' },
-  mois:    { main: Math.round(160000/12), compare: Math.round(3524/12), ctx: 'En un mois, dans toute la France', cctx: 'Décès sur la route sur la même période' },
+  semaine: { main: Math.round(160000/52),  compare: Math.round(3524/52),  ctx: 'En une semaine, dans toute la France', cctx: 'Décès sur la route sur la même période' },
+  mois:    { main: Math.round(160000/12),  compare: Math.round(3524/12),  ctx: 'En un mois, dans toute la France', cctx: 'Décès sur la route sur la même période' },
 };
 const mainEl   = document.getElementById('counter-main');
 const ctxEl    = document.getElementById('counter-ctx');
@@ -872,43 +1219,30 @@ document.querySelectorAll('.counter-btn').forEach(btn => {
     document.querySelectorAll('.counter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     const d = counters[btn.dataset.unit];
-    mainEl.textContent = d.main;
-    ctxEl.textContent = d.ctx;
-    cmpEl.textContent = d.compare;
-    cmpCtxEl.textContent = d.cctx;
+    mainEl.textContent = d.main; ctxEl.textContent = d.ctx;
+    cmpEl.textContent = d.compare; cmpCtxEl.textContent = d.cctx;
   });
 });
 
-// ── TABS ────────────────────────────────────────────────
+// ── TABS RESSOURCES ──────────────────────────────────────
 document.querySelectorAll('.res-tab').forEach(tab => {
   tab.addEventListener('click', () => {
     document.querySelectorAll('.res-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
     document.querySelectorAll('.res-panel').forEach(p => p.classList.remove('active'));
-    tab.classList.add('active');
-    tab.setAttribute('aria-selected','true');
+    tab.classList.add('active'); tab.setAttribute('aria-selected','true');
     document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
   });
 });
 
-// ── ANIMATIONS ──────────────────────────────────────────
-// Polling robuste : vérifie toutes les 200ms quels éléments sont dans le viewport.
-// Fonctionne quel que soit l'élément scrollant (window, body, conteneur).
+// ── ANIMATIONS BARRES ────────────────────────────────────
 const firedSections = new Set();
-
 function fireAllBarsIn(container) {
   if (firedSections.has(container)) return;
   firedSections.add(container);
-  container.querySelectorAll('.funnel-bar-fill').forEach(el => {
-    el.style.width = el.dataset.width;
-  });
-  container.querySelectorAll('.bar-fill').forEach(el => {
-    el.style.width = (el.dataset.pct || '0') + '%';
-  });
-  container.querySelectorAll('.jbar-fill').forEach(el => {
-    el.style.width = (el.dataset.pct || '0') + '%';
-  });
+  container.querySelectorAll('.funnel-bar-fill').forEach(el => { el.style.width = el.dataset.width; });
+  container.querySelectorAll('.bar-fill').forEach(el => { el.style.width = (el.dataset.pct || '0') + '%'; });
+  container.querySelectorAll('.jbar-fill').forEach(el => { el.style.width = (el.dataset.pct || '0') + '%'; });
 }
-
 function checkVisibility() {
   document.querySelectorAll('#impunite, #comparaisons, #justice, .counter-section').forEach(s => {
     if (firedSections.has(s)) return;
@@ -916,19 +1250,256 @@ function checkVisibility() {
     if (r.top < window.innerHeight && r.bottom > 0) fireAllBarsIn(s);
   });
 }
-
-// Polling toutes les 200ms + events
-const pollInterval = setInterval(() => {
-  checkVisibility();
-  if (firedSections.size >= 4) clearInterval(pollInterval);
-}, 200);
-
+const pollInterval = setInterval(() => { checkVisibility(); if (firedSections.size >= 4) clearInterval(pollInterval); }, 200);
 window.addEventListener('scroll', checkVisibility, { passive: true });
 document.addEventListener('scroll', checkVisibility, { passive: true });
 window.addEventListener('load', checkVisibility);
-setTimeout(checkVisibility, 100);
-setTimeout(checkVisibility, 500);
-setTimeout(checkVisibility, 1000);
+setTimeout(checkVisibility, 100); setTimeout(checkVisibility, 500); setTimeout(checkVisibility, 1000);
+
+// ── B — GÉNÉRATEUR D'EMAIL ───────────────────────────────
+let eluGeneratedCount = 0;
+
+const emailTemplates = {
+  prescriptibilite: (nom, dept) =>
+`Madame, Monsieur le/la Député·e,
+
+Je me permets de vous écrire en tant que citoyen·ne de ${dept} sur un sujet qui me préoccupe profondément : l'imprescriptibilité des crimes d'inceste.
+
+En France, 7,4 millions d'adultes déclarent avoir été victimes d'inceste — soit 11 % de la population (sondage Ipsos pour Face à l'inceste, oct. 2023). Or, 75 % des témoignages recueillis par la CIIVISE portaient sur des faits prescrits (Sénat, PPL n°127, nov. 2025). La prescription prive la grande majorité des victimes de tout accès à la justice.
+
+90 % des Français se déclarent favorables à l'imprescriptibilité des crimes d'inceste (Ipsos, 2023). La PPL intégrale déposée par 109 député·es en décembre 2025 prévoit cette mesure.
+
+Je vous demande instamment de soutenir l'inscription de cette proposition à l'ordre du jour de l'Assemblée nationale et de voter en faveur de son adoption.
+
+Avec mes respectueuses salutations,
+${nom}`,
+
+  ppl: (nom, dept) =>
+`Madame, Monsieur le/la Député·e,
+
+Je vous écris depuis ${dept} pour vous alerter sur l'urgence d'inscrire à l'ordre du jour la Proposition de loi intégrale contre les violences sexistes et sexuelles (PPL AN n°2169, déc. 2025).
+
+Cette PPL a été déposée par 109 député·es de 8 groupes politiques différents. Elle intègre notamment les recommandations de la CIIVISE dont le gouvernement n'a retenu que 41 sur 82 en novembre 2023. Aujourd'hui, moins de 1 % des affaires d'inceste aboutissent à une condamnation (CIIVISE, 2023 · Fondation Jean-Jaurès, 2026).
+
+Le coût du déni pour la société française s'élève à 9,7 milliards d'euros par an (CIIVISE, avis juin 2023), soit 194 fois le budget annuel alloué à la lutte contre les VSS.
+
+Je vous demande de peser de votre influence pour que cette proposition soit mise à l'ordre du jour et débattue sans délai.
+
+Dans l'attente de votre réponse, veuillez agréer, Madame, Monsieur le/la Député·e, l'expression de mes respectueuses salutations,
+${nom}`,
+
+  ciivise: (nom, dept) =>
+`Madame, Monsieur le/la Député·e,
+
+Je me permets de vous interpeller depuis ${dept} au sujet des recommandations de la CIIVISE (Commission Indépendante sur l'Inceste et les Violences Sexuelles faites aux Enfants).
+
+En novembre 2023, après deux ans de travaux et 30 000 témoignages recueillis, la CIIVISE a rendu 82 recommandations concrètes. Le gouvernement n'en a retenu que 41. Résultat : 160 000 enfants continuent d'être victimes chaque année, et moins de 1 % des affaires aboutissent à une condamnation.
+
+Ces recommandations couvrent la formation des professionnels, le traitement judiciaire des plaintes, le soutien aux victimes et la prévention en milieu scolaire. Leur coût est sans commune mesure avec le coût du déni, estimé à 9,7 milliards d'euros par an (CIIVISE, juin 2023).
+
+Pouvez-vous me préciser quelle est votre position sur la mise en œuvre des 41 recommandations non retenues, et si vous entendez peser pour leur adoption ?
+
+Cordialement,
+${nom}`,
+
+  budget: (nom, dept) =>
+`Madame, Monsieur le/la Député·e,
+
+Je vous écris depuis ${dept} sur une contradiction budgétaire documentée qui me semble inacceptable.
+
+La CIIVISE a calculé que l'impunité des agresseurs et l'absence de soutien aux victimes coûtent 9,7 milliards d'euros par an à la société française (avis "Le coût du déni", 12 juin 2023). Dans le même temps, le budget annuel de l'État consacré à la lutte contre les violences sexistes et sexuelles reste aux alentours de 50 millions d'euros (PLF 2024, prog. 137 DGCS et action CIPDR) — soit un rapport de 1 à 194.
+
+La CIIVISE elle-même l'affirme : traiter le problème coûte moins cher que de l'ignorer.
+
+Je vous demande de vous engager, dans le cadre des discussions budgétaires à venir, pour une augmentation substantielle des moyens alloués à la protection de l'enfance et au traitement judiciaire de l'inceste.
+
+Avec mes respectueuses salutations,
+${nom}`,
+
+  formation: (nom, dept) =>
+`Madame, Monsieur le/la Député·e,
+
+Je vous interpelle depuis ${dept} sur la question de la formation professionnelle au repérage des violences sexuelles sur mineurs.
+
+Aujourd'hui, 92 % des enfants qui révèlent des violences ne reçoivent pas de réponse protectrice (CIIVISE, 2023). Cette réalité s'explique en partie par le manque de formation des adultes professionnels en contact avec des enfants : enseignants, médecins, travailleurs sociaux, personnels de justice.
+
+La PPL intégrale (AN n°2169, déc. 2025) prévoit de rendre obligatoire cette formation. Le kit CIIVISE « Mélissa et les autres » existe, est gratuit, et a déjà été téléchargé par plus de 8 000 organismes. Les outils sont disponibles — c'est le cadre légal contraignant qui manque.
+
+Je vous demande de soutenir l'adoption de cette mesure dans le cadre de la PPL intégrale ou de tout autre vecteur législatif approprié.
+
+Cordialement,
+${nom}`,
+
+  signalement: (nom, dept) =>
+`Madame, Monsieur le/la Député·e,
+
+Je me permets de vous écrire depuis ${dept} sur le taux alarmant de classements sans suite dans les affaires de violences sexuelles sur mineurs.
+
+Les chiffres sont documentés : 70 % des plaintes pour violences sexuelles sur mineurs sont classées sans suite (Édouard Durand, co-président CIIVISE, JDD). Au final, moins de 1 % des affaires d'inceste aboutissent à une condamnation (CIIVISE, nov. 2023 · Sénat PPL n°127, nov. 2025 · Fondation Jean-Jaurès, avr. 2026). La France compte 3,2 procureurs pour 100 000 habitants, contre une médiane européenne de 11,2 (CEPEJ, oct. 2024).
+
+Ce n'est pas une question d'absence de plaintes : c'est une question de moyens alloués à la Justice et de priorité politique donnée à ces affaires.
+
+Je vous demande de vous positionner publiquement en faveur d'un renforcement des moyens du parquet spécialisé dans les affaires de crimes sexuels sur mineurs, et de soutenir toute mesure legislative visant à améliorer le taux de poursuites.
+
+Dans l'attente de votre réponse, veuillez agréer, Madame, Monsieur le/la Député·e, l'expression de mes respectueuses salutations,
+${nom}`,
+};
+
+const generateBtn = document.getElementById('elu-generate-btn');
+const outputDiv   = document.getElementById('elu-output');
+const emailBox    = document.getElementById('elu-email-box');
+const copyBtn     = document.getElementById('elu-copy-btn');
+const counterEl   = document.getElementById('elu-counter');
+
+if (generateBtn) {
+  generateBtn.addEventListener('click', () => {
+    const nom   = (document.getElementById('elu-nom').value.trim() || 'Un·e citoyen·ne de France');
+    const dept  = (document.getElementById('elu-dept').value.trim() || 'votre département');
+    const sujet = document.getElementById('elu-sujet').value;
+    if (!sujet) { document.getElementById('elu-sujet').focus(); return; }
+    const template = emailTemplates[sujet];
+    if (!template) return;
+    const text = template(nom, dept);
+    emailBox.textContent = text;
+    outputDiv.classList.add('visible');
+    eluGeneratedCount++;
+    if (counterEl) counterEl.innerHTML = `<strong>${eluGeneratedCount}</strong> message${eluGeneratedCount > 1 ? 's' : ''} généré${eluGeneratedCount > 1 ? 's' : ''} depuis le chargement de cette page.`;
+    outputDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    copyBtn.textContent = 'Copier'; copyBtn.classList.remove('copied');
+  });
+}
+
+if (copyBtn) {
+  copyBtn.addEventListener('click', () => {
+    const text = emailBox.textContent;
+    if (!text) return;
+    navigator.clipboard.writeText(text).then(() => {
+      copyBtn.textContent = 'Copié ✓'; copyBtn.classList.add('copied');
+      setTimeout(() => { copyBtn.textContent = 'Copier'; copyBtn.classList.remove('copied'); }, 2500);
+    }).catch(() => {
+      const sel = window.getSelection(), range = document.createRange();
+      range.selectNodeContents(emailBox); sel.removeAllRanges(); sel.addRange(range);
+      document.execCommand('copy');
+      copyBtn.textContent = 'Copié ✓'; copyBtn.classList.add('copied');
+      setTimeout(() => { copyBtn.textContent = 'Copier'; copyBtn.classList.remove('copied'); }, 2500);
+    });
+  });
+}
+
+// ── D — GÉNÉRATEUR D'IMAGE À PARTAGER ───────────────────
+const shareData = [
+  { stat: '7,4 millions', label: 'de Français adultes victimes d\'inceste', sublabel: '1 personne sur 10', source: 'Ipsos · Face à l\'inceste, oct. 2023' },
+  { stat: '160 000', label: 'enfants victimes chaque année en France', sublabel: 'soit 1 enfant toutes les 3 minutes', source: 'CIIVISE, rapport public nov. 2023' },
+  { stat: '< 1 %', label: 'des affaires d\'inceste aboutissent', sublabel: 'à une condamnation', source: 'CIIVISE 2023 · Sénat PPL n°127, 2025' },
+  { stat: '9,7 milliards €', label: 'le coût annuel du déni', sublabel: 'pour la société française', source: 'CIIVISE, avis "Le coût du déni", juin 2023' },
+  { stat: '92 %', label: 'des enfants qui parlent', sublabel: 'ne reçoivent pas de réponse protectrice', source: 'CIIVISE, rapport intermédiaire 2022–2023' },
+  { stat: '97 %', label: 'des auteurs d\'inceste sont des hommes', sublabel: 'tous milieux sociaux confondus', source: 'CIIVISE 2023 · Enquête Virage, Ined 2015' },
+];
+
+let currentShareIdx = 0;
+const overlay   = document.getElementById('share-overlay');
+const canvas    = document.getElementById('share-canvas');
+const dlBtn     = document.getElementById('share-dl-btn');
+const closeBtn  = document.getElementById('share-close-btn');
+
+function openShareModal(idx) {
+  currentShareIdx = idx;
+  drawShareImage(idx);
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeShareModal() {
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+if (closeBtn) closeBtn.addEventListener('click', closeShareModal);
+if (overlay)  overlay.addEventListener('click', e => { if (e.target === overlay) closeShareModal(); });
+
+function drawShareImage(idx) {
+  if (!canvas) return;
+  const d   = shareData[idx];
+  const ctx = canvas.getContext('2d');
+  const W = 1080, H = 1080;
+  canvas.width = W; canvas.height = H;
+
+  // Background
+  ctx.fillStyle = '#080312';
+  ctx.fillRect(0, 0, W, H);
+
+  // Top accent line
+  ctx.fillStyle = '#571FEA';
+  ctx.fillRect(0, 0, W, 6);
+
+  // Noise texture (subtle grid)
+  ctx.strokeStyle = 'rgba(87,31,234,0.07)';
+  ctx.lineWidth = 1;
+  for (let x = 0; x < W; x += 60) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke(); }
+  for (let y = 0; y < H; y += 60) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); }
+
+  // Eyebrow
+  ctx.fillStyle = 'rgba(87,31,234,0.6)';
+  ctx.fillRect(80, 120, 40, 2);
+  ctx.fillStyle = 'rgba(245,243,250,0.4)';
+  ctx.font = '500 22px "DM Mono", monospace';
+  ctx.letterSpacing = '0.12em';
+  ctx.fillText('INCESTE EN FRANCE · DONNÉES OFFICIELLES', 135, 128);
+  ctx.letterSpacing = '0';
+
+  // Main stat
+  ctx.fillStyle = '#571FEA';
+  ctx.font = `bold ${d.stat.length > 8 ? '120' : '160'}px "DM Serif Display", Georgia, serif`;
+  ctx.textAlign = 'left';
+  ctx.fillText(d.stat, 80, 360);
+
+  // Label
+  ctx.fillStyle = '#F5F3FA';
+  ctx.font = '500 52px "Inter", sans-serif';
+  const labelLines = wrapText(ctx, d.label, W - 160);
+  labelLines.forEach((line, i) => ctx.fillText(line, 80, 460 + i * 68));
+
+  // Sublabel
+  ctx.fillStyle = 'rgba(245,243,250,0.55)';
+  ctx.font = '400 40px "Inter", sans-serif';
+  const subY = 460 + labelLines.length * 68 + 30;
+  ctx.fillText(d.sublabel, 80, subY);
+
+  // Source
+  ctx.fillStyle = 'rgba(245,243,250,0.3)';
+  ctx.font = '400 26px "DM Mono", monospace';
+  ctx.fillText('Source : ' + d.source, 80, H - 130);
+
+  // URL
+  ctx.fillStyle = 'rgba(87,31,234,0.8)';
+  ctx.fillRect(80, H - 100, W - 160, 1);
+  ctx.fillStyle = 'rgba(245,243,250,0.45)';
+  ctx.font = '400 24px "DM Mono", monospace';
+  ctx.fillText('inceste-france.org · Libre de diffusion · Sensibilisation non commerciale', 80, H - 60);
+
+  ctx.textAlign = 'left';
+}
+
+function wrapText(ctx, text, maxW) {
+  const words = text.split(' '), lines = [];
+  let cur = '';
+  for (const w of words) {
+    const test = cur ? cur + ' ' + w : w;
+    if (ctx.measureText(test).width > maxW && cur) { lines.push(cur); cur = w; }
+    else cur = test;
+  }
+  if (cur) lines.push(cur);
+  return lines;
+}
+
+if (dlBtn) {
+  dlBtn.addEventListener('click', () => {
+    const a = document.createElement('a');
+    a.download = `inceste-france-chiffre-${currentShareIdx + 1}.png`;
+    a.href = canvas.toDataURL('image/png');
+    a.click();
+  });
+}
 </script>
  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "284b55177d064f73b5eeadfce08342cc"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
